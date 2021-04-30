@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Meet Dakota | Progress</title>
+    
+<!-- Load an icon library to show a hamburger menu (bars) on small screens -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+<link rel="stylesheet" href="styling/style.css">
+    
+<!-- Load favicon options -->
+<link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
+<link rel="manifest" href="favicon/site.webmanifest">
+    
+<!-- Scripts -->
+<script src="scripts/topnav.js"></script>
+<script src="scripts/carousel.js"></script>
+</head>
+<body onload="showImages()">
+
+<nav class="topnav" id="nav">
+    <a href="index.html">HOME</a>
+    <a href="about.html">ABOUT</a>
+    <a href="progress.html" class="active">PROGRESS</a>
+    <a href="resources.html">RESOURCES</a>
+    
+    <a href="#" class="barsIcon" onclick="toggleNav()"><i class="fa fa-bars"></i></a>
+</nav>
+
+<article>
+    <section class="progressSection">
+    
+        <!-- picture slideshow container -->
+        <div class="progressImgContainer">
+
+        <!-- images with number and caption text -->
+            <div class="progressImgSlide fade">
+                <img src="images/progress1.jpg" alt="Dakota when he arrived at the shelter" >
+                <div class="imgCaption">January 2020</div>
+            </div>
+
+            <div class="progressImgSlide hidden fade">
+                <img src="images/progress2.jpg" alt="Dakota on a boat with his owner" >
+                <div class="imgCaption">July 2020</div>
+            </div>
+
+            <div class="progressImgSlide hidden fade">
+                <img src="images/progress3.jpg" alt="Dakota celebrating with a party hat" >
+                <div class="imgCaption">April 2021</div>
+            </div>
+        </div>
+        
+         <!-- content slideshow container -->
+        <div class="progressContentContainer">
+
+        <!-- images with number and caption text -->
+            <div class="progressContentSlide fade">
+                <div class="contentNumber">1 / 3</div>
+                <div class="content dark" id="past"></div>
+                <div class="contentCaption">
+                    <h2>SAD START</h2>
+                    <p>At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga. Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere possimus, omnis voluptas assumenda est, omnis dolor repellendus. Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet ut et voluptates repudiandae sint et molestiae non recusandae. Itaque earum rerum hic tenetur a sapiente delectus, ut aut reiciendis voluptatibus maiores alias consequatur aut perferendis doloribus asperiores repellat</p>
+                </div>
+            </div>
+
+            <div class="progressContentSlide hidden fade">
+                <div class="contentNumber">2 / 3</div>
+                <div class="content medium" id="present"></div>
+                <div class="contentCaption">
+                    <h2>CURRENTLY CONTENT</h2>
+                    <p>At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga. Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere possimus, omnis voluptas assumenda est, omnis dolor repellendus. Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet ut et voluptates repudiandae sint et molestiae non recusandae. Itaque earum rerum hic tenetur a sapiente delectus, ut aut reiciendis voluptatibus maiores alias consequatur aut perferendis doloribus asperiores repellat</p>
+                </div>
+            </div>
+
+            <div class="progressContentSlide hidden fade">
+                <div class="contentNumber">3 / 3</div>
+                <div class="content light"></div>
+                <div class="contentCaption">
+                    <h2>FULFILLING FUTURE</h2>
+                    <!-- every dog needs a job -->
+                    <p>At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga. Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere possimus, omnis voluptas assumenda est, omnis dolor repellendus. Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet ut et voluptates repudiandae sint et molestiae non recusandae. Itaque earum rerum hic tenetur a sapiente delectus, ut aut reiciendis voluptatibus maiores alias consequatur aut perferendis doloribus asperiores repellat</p>
+                </div>
+            </div>
+
+            <!-- next and previous buttons -->
+            <a class="prevBtn" onclick="plusSlides(-1)">&#10094;</a>
+            <a class="nextBtn" onclick="plusSlides(1)">&#10095;</a>
+        
+            <br>
+        
+            <!-- dots/circle navigation -->
+            <div class="dotsContainer">
+                <span class="dot" onclick="currentSlide(1)"></span>
+                <span class="dot" onclick="currentSlide(2)"></span>
+                <span class="dot" onclick="currentSlide(3)"></span>
+            </div>
+        </div>
+    </section>
+    
+</article>
+    
+</body>
+</html>

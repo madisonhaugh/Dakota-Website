@@ -1,0 +1,419 @@
+@charset "utf-8";
+
+/********** GLOBAL STYLING **********/
+
+body {
+    margin: 0;
+    font-family: 'Courier New', monospace;
+}
+
+img {
+    border: 0.0625em solid #333333;
+}
+
+.light {
+    background-color: #8b8b8b;
+}
+    
+.medium {
+    background-color: #787878;
+}
+    
+.dark {
+    background-color: #646464;
+}
+
+
+
+
+
+/********** NAVIGATION **********/
+
+.topnav {
+    text-align: left;
+    background-color: #333333;
+    opacity: 90%;
+    overflow: hidden;
+}
+
+.topnav a {
+    display: inline-block;
+    color: #f2f2f2;
+    text-align: center;
+    width: 23.5%;
+    padding: 1.0em 0;
+    text-decoration: none;
+    font-size: 1.1em;
+}
+
+.topnav a:hover {
+	background-color: #5B5B5B;
+    font-style: italic;
+    text-decoration: underline;
+}
+
+.topnav a.active {
+    font-style: italic;
+    text-decoration: underline;
+    color: #ffffff;
+}
+
+.topnav .barsIcon {
+    display: none;
+} 
+
+@media screen and (max-width: 600px) {
+  .topnav a:not(:first-child) {
+	  display: none;
+   }
+
+  .topnav a.barsIcon {
+    float: right;
+    display: block;
+  }
+
+  .topnav.responsive {
+	  position: relative;
+  }
+
+  .topnav.responsive .barsIcon {
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+
+  .topnav.responsive a {
+    float: none;
+    display: block;
+    text-align: left;
+  }
+}
+
+
+
+
+
+/********** HOME PAGE **********/
+
+.homeSummary {
+    width: 92%;
+    margin: 1.5% 3%;
+    padding: 0.5%;
+    text-align: center;
+    border: 0.25em double black;
+}
+
+.homeSection {
+    width: 33.33%;
+    text-align: center;
+    position: relative;
+    float: left;
+}
+
+.homeSection a,
+.homeSection a:visited {
+    color: black;
+}
+
+.homeSection img {
+    height: 25.0em;
+    width: 80%;
+    opacity: 70%;
+}
+
+.homeSection img:hover {
+    opacity: 0.5;
+}
+
+.homeSection h2 {
+    position: absolute;
+    transform: translate(-50%, -50%);
+    top: 20%;
+    left: 50%;
+}
+
+
+
+
+
+/********** ABOUT PAGE **********/
+
+.aboutSection {
+    clear: both;
+    width: 100%;
+    margin: 3% 0% 3% 0%;
+}
+
+.aboutSection.left img {
+    float: left;
+    width: 32%;
+    opacity: 0.8;
+    margin: 1%;
+    height: 100%;
+}
+
+.aboutSection.left .aboutContent {
+    float: right;
+    width: 63%;
+    margin: 1%;
+}
+
+.aboutSection.right img {
+    float: right;
+    width: 32%;
+    opacity: 0.8;
+    margin: 1%;
+    height: 100%;
+}
+
+.aboutSection.right .aboutContent {
+    float: left;
+    width: 63%;
+    margin: 1%;
+}
+
+
+@media screen and (max-width: 600px) {
+    .aboutSection.left img,
+    .aboutSection.right img {
+        clear: both;
+        width: 97%;
+    }
+
+    .aboutSection.left .aboutContent,
+    .aboutSection.right .aboutContent {
+        clear: both;
+        width: 97%;
+    }
+}
+
+
+
+
+
+/********** PROGRESS PAGE **********/
+
+.progressSection {
+    clear: both;
+    width: 100%;
+    margin: 2% 0;
+}
+
+.progressImgContainer {
+    float: left;
+    width: 31%;
+    position: relative;
+    margin: 0 1%;
+}
+
+.progressContentContainer {
+    float: right;
+    width: 64%;
+    position: relative;
+    margin: 0 1%;
+}
+
+.progressImgSlide.hidden,
+.progressContentSlide.hidden {
+  display: none;
+}
+
+.progressImgSlide img {
+    width: 100%;
+    opacity: 0.8;
+    margin: 1%;
+    height: 30.0em;
+}
+
+.progressContentSlide .content {
+    margin-top: 0.25em;
+    width: 100%;
+    height: 30.0em;
+    border: 0.0625em solid #333333;
+}
+
+.progressImgSlide .imgCaption {
+  color: #333333;
+  font-size: 1.0em;
+  position: absolute;
+  bottom: 4%;
+  width: 100%;
+  text-align: center;
+}
+
+.progressContentSlide .contentCaption {
+    color: #f2f2f2;
+    font-size: 1.0em;
+    position: absolute;
+    top: 5%;
+    text-align: center;
+    padding: 3.5em 3.5em;
+}
+
+.progressContentSlide .contentNumber {
+    color: #f2f2f2;
+    font-size: 0.75em;
+    padding: 0.5em 0.75em;
+    position: absolute;
+    top: 1%;
+    right: 0;
+    z-index: 1;
+}
+
+.progressContentContainer .prevBtn,
+.progressContentContainer .nextBtn {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  margin-top: -1.375em;
+  padding: 1.0em;
+  color: white;
+  font-weight: bold;
+  font-size: 1.125em;
+  transition: 0.6s ease;
+  border-radius: 0 0.25em 0.25em 0;
+  user-select: none;
+}
+
+.progressContentContainer .nextBtn {
+  right: 0;
+  border-radius: 0.25em 0 0 0.25em;
+}
+
+.progressContentContainer .prevBtn:hover,
+.progressContentContainer .nextBtn:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+
+.progressContentContainer .dotsContainer {
+    text-align: center;
+    width: 100%;
+    position: absolute;
+    bottom: 6%;
+}
+
+.progressContentContainer .dot {
+  cursor: pointer;
+  height: 1.0em;
+  width: 1.0em;
+  margin: 0 0.13em;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.progressContentContainer .active,
+.progressContentContainer .dot:hover {
+  background-color: #ececec;
+}
+
+.progressImgSlide.fade,
+.progressContentSlide.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
+
+@keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
+
+
+@media screen and (max-width: 600px) {
+    .progressImgContainer {
+        clear: both;
+        width: 97%;
+        position: relative;
+        margin: 0 1%;
+    }
+
+    .progressContentContainer {
+        clear: both;
+        width: 97%;
+        position: relative;
+        margin: 0 1%;
+    }
+    
+    .progressContentSlide .contentCaption {
+        font-size: 0.9em;
+        top: 1%;
+    }
+
+}
+
+
+
+
+
+/********** RESOURCES PAGE **********/
+
+.resourceSection {
+    margin-top: 1%;
+    width: 50%;
+    text-align: center;
+    position: relative;
+    float: left;
+}
+
+.resourceSection img {
+    width: 80%;
+    opacity: 50%;
+    height: 33.5em;
+}
+
+.resourceSection h2 {
+    margin-left: 10%;
+    width: 80%;
+    position: absolute;
+    top: 10%;
+}
+
+.resourceSection ul {
+    list-style-type: none;
+    position: absolute;
+    top: 25%;
+    display: table;
+    width: 80%;
+}
+
+.resourceSection li {
+    display: block;
+    margin: 7% auto;
+}
+
+.resourceSection a {
+    color: #333333;
+    text-align: center;
+    text-decoration: none;
+    font-size: 1.5em;
+}
+
+.resourceSection a:hover {
+    font-style: italic;
+    text-decoration: underline;
+}
+
+.resourceSection a.active {
+    font-style: italic;
+    text-decoration: underline;
+    color: #333333;
+}
+
+@media screen and (max-width: 600px) {
+    .resourceSection h2 {
+        font-size: 1.0em;
+    }
+
+    .resourceSection a {
+        font-size: 0.9em;
+    }
+}
