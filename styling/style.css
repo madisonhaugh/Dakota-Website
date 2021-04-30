@@ -144,7 +144,7 @@ img {
     margin: 3% 0% 3% 0%;
 }
 
-.aboutSection.left img {
+.aboutSection img {
     float: left;
     width: 32%;
     opacity: 0.8;
@@ -152,36 +152,19 @@ img {
     height: 100%;
 }
 
-.aboutSection.left .aboutContent {
+.aboutSection .aboutContent {
     float: right;
     width: 63%;
     margin: 1%;
 }
-
-.aboutSection.right img {
-    float: right;
-    width: 32%;
-    opacity: 0.8;
-    margin: 1%;
-    height: 100%;
-}
-
-.aboutSection.right .aboutContent {
-    float: left;
-    width: 63%;
-    margin: 1%;
-}
-
 
 @media screen and (max-width: 600px) {
-    .aboutSection.left img,
-    .aboutSection.right img {
+    .aboutSection img {
         clear: both;
         width: 97%;
     }
 
-    .aboutSection.left .aboutContent,
-    .aboutSection.right .aboutContent {
+    .aboutSection .aboutContent {
         clear: both;
         width: 97%;
     }
