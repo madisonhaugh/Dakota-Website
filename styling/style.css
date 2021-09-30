@@ -93,6 +93,12 @@ img {
     display: block;
     text-align: left;
   }
+    
+
+  .topnav a.active {
+    font-style: normal;
+    text-decoration: none;
+  }
 }
 
 
